@@ -1,12 +1,34 @@
+import { useState, useEffect } from "react";
+import { unlockAudio } from "./functions/audio";
+import AudioUnlockOverlay from "./components/SoundUnlock";
+import Header from "./components/Header";
+import Home from "./views/Home";
+import Projects from "./views/Projects";
+import About from "./views/About";
+import Interests from "./views/Interests";
+import Lab from "./views/Lab";
+
 export default function App() {
+  const [view, setView] = useState<"home" | "projects" | "about" | "interests" | "lab">("home");
+  
+  useEffect(() => {
+    const handler = () => {
+      unlockAudio();
+    };
+    document.addEventListener("click", handler, { once: true });
+    return () => document.removeEventListener("click", handler);
+  }, []);
   return (
-    <main style={{ minHeight: "100vh", padding: "60px" }}>
-      <div className="panel-metal">
-        <h1>System Control</h1>
-        <p>If you see this styled correctly, everything works.</p>
-        <button className="button-metal">Test Button</button>
-      </div>
-    </main>
+    <>
+      <Header onNavigate={setView} />
+      <main style={{ padding: "60px" }}>
+        {view === "home" && <Home />}
+        {view === "projects" && <Projects />}
+        {view === "about" && <About />}
+        {view === "interests" && <Interests />}
+        {view === "lab" && <Lab />}
+      </main>
+      <AudioUnlockOverlay />
+    </>
   );
 }
-
