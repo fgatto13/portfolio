@@ -1,5 +1,8 @@
 import Panel from "./Panel";
 import ButtonMetal from "./ButtonMetal";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Footer() {
   return (
@@ -16,6 +19,7 @@ export default function Footer() {
                 window.location.href = "mailto:francescogatto2001@gmail.com";
               }}
             >
+              <FontAwesomeIcon icon={faEnvelope} style={{color: "#008831",}} />
               Contact Me
             </ButtonMetal>
             <ButtonMetal
@@ -23,6 +27,7 @@ export default function Footer() {
                 window.location.href = "https://github.com/fgatto13";
               }}
             >
+              <FontAwesomeIcon icon={faGithub} style={{color: "#008831",}} />
               GitHub
             </ButtonMetal>
           </div>
