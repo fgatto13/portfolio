@@ -15,7 +15,7 @@ export default function Header({ onNavigate }: Props) {
           <h1>Fgatto13</h1>
 
           <div style={{ display: "flex", gap: "12px" }}>
-             <ButtonMetal onClick={() => onNavigate("home")}>Home</ButtonMetal>
+            <ButtonMetal onClick={() => onNavigate("home")}>Home</ButtonMetal>
             <ButtonMetal onClick={() => onNavigate("projects")}>Projects</ButtonMetal>
             <ButtonMetal onClick={() => onNavigate("interests")}>Interests</ButtonMetal>
             <ButtonMetal onClick={() => onNavigate("lab")}>Lab</ButtonMetal>

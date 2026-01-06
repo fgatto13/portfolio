@@ -7,6 +7,7 @@ import Projects from "./views/Projects";
 import About from "./views/About";
 import Interests from "./views/Interests";
 import Lab from "./views/Lab";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [view, setView] = useState<"home" | "projects" | "about" | "interests" | "lab">("home");
@@ -29,6 +30,7 @@ export default function App() {
         {view === "lab" && <Lab />}
       </main>
       <AudioUnlockOverlay />
+      <Footer />
     </>
   );
 }

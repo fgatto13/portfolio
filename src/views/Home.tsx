@@ -1,14 +1,11 @@
 import Panel from "../components/Panel";
-import ButtonMetal from "../components/ButtonMetal";
 
 export default function Home() {
   return (
-    <section>
-      <Panel>
-        <h1>Welcome!</h1>
-        <p>This is the home view.</p>
-        <ButtonMetal>Click me</ButtonMetal>
-      </Panel>
-    </section>
+    <Panel>
+      <h1>Welcome!</h1>
+      <p>This is my portfolio.</p>
+      <p>As you can see, this is a work in progress, so feel free to reach out for feedback moving on.</p>
+    </Panel>
   );
 }
