@@ -15,8 +15,8 @@
 body {
     font-family: var(--font-tech);
     margin: 0;
-    height: 100vh;
     background: darkgray;
+    width: auto;
     background: repeating-linear-gradient(
         90deg,
         #0f0f0f 0px,
@@ -24,18 +24,26 @@ body {
         #0a0a0a 4px
     );
 }
-main {
+#root {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100dvh;
+    width: 100dvw;
 }
-footer {
-    position: fixed;
-    bottom: 20px;
+footer, header {
     width: 100%;
     height: auto;
 }
+.content-wrapper {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .panel-metal {
     position: relative;
     padding: 20px;
@@ -66,6 +74,7 @@ footer {
         );
     pointer-events: none;
 }
+
 .panel-metal::after {
     content: "";
     position: absolute;
@@ -82,10 +91,8 @@ footer {
     font-size: 14px;
     cursor: pointer;
     color: #000;
-
     background: linear-gradient(145deg, #fafafa, #d0d0d0);
     border: 1px solid var(--metal-dark);
-
     box-shadow:
         inset 1px 1px 2px rgba(255,255,255,0.6),
         inset -2px -2px 4px rgba(0,0,0,0.2),
@@ -112,11 +119,9 @@ footer {
     padding: 10px 14px;
     border-radius: 14px;
     font-family: var(--font-tech);
-
     background: #111;
     color: var(--glow-green);
     border: 1px solid var(--glow-green-dark);
-
     box-shadow:
         inset 0 0 12px rgba(0,255,90,0.25),
         0 0 8px rgba(0,255,90,0.1);
@@ -130,6 +135,7 @@ footer {
 }
 .nav-blade {
     display: flex;
+    justify-content: space-between;
     gap: 18px;
     padding: 12px;
 }

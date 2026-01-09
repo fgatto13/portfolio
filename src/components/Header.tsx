@@ -10,7 +10,6 @@ export default function Header({ onNavigate }: Props) {
       <Panel>
         <div
           className="nav-blade"
-          style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}
         >
           <h1>Fgatto13</h1>
 

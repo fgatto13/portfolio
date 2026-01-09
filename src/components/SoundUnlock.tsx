@@ -31,7 +31,7 @@ export default function AudioUnlockOverlay() {
         bottom: "20px",
         right: "20px",
         padding: "12px 20px",
-        background: "#111",
+        background: "rgba(0, 0, 0, 0.5)",
         color: "#0f0",
         border: "1px solid #0f0",
         borderRadius: "12px",

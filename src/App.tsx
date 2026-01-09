@@ -21,16 +21,18 @@ export default function App() {
   }, []);
   return (
     <>
-      <Header onNavigate={setView} />
-      <main style={{ padding: "60px" }}>
-        {view === "home" && <Home />}
-        {view === "projects" && <Projects />}
-        {view === "about" && <About />}
-        {view === "interests" && <Interests />}
-        {view === "lab" && <Lab />}
-      </main>
-      <AudioUnlockOverlay />
-      <Footer />
+      <div className="content-wrapper">
+        <Header onNavigate={setView} />
+        <main style={{ padding: "60px" }}>
+          {view === "home" && <Home />}
+          {view === "projects" && <Projects />}
+          {view === "about" && <About />}
+          {view === "interests" && <Interests />}
+          {view === "lab" && <Lab />}
+        </main>
+        <AudioUnlockOverlay />
+        <Footer />
+      </div>
     </>
   );
 }
